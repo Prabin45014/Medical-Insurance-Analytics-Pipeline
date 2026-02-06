@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: stg_medical_insurance
+    description: Cleaned and standardized medical insurance data
+    columns:
+      - name: person_id
+        tests:
+          - not_null
+          - unique
+
+      - name: age
+        tests:
+          - not_null
+
+      - name: annual_medical_cost
+        tests:
+          - not_null
+
+  - name: insurance_metrics
+    description: Region-level insurance cost metrics
+    columns:
+      - name: region
+        tests:
+          - not_null

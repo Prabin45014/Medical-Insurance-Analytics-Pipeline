@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: insurance_raw
+    database: medical-insurance-project
+    schema: medical_insurance
+    tables:
+      - name: medical_insurance_raw

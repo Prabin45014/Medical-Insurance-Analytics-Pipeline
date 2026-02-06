@@ -1,0 +1,8 @@
+Core:
+  - installed: 1.11.2
+  - latest:    1.11.2 - Up to date!
+
+Plugins:
+  - bigquery: 1.11.0 - Up to date!
+
+
