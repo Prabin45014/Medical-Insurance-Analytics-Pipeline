@@ -16,74 +16,38 @@ Medical insurance data is extracted from Kaggle using the **Kaggle API and Pytho
 
 ###### **Project Architecture \& Workflow** 
 
-**📌 Architecture**
-
-       
-
-**Data Source│──────▶│ Data Extraction│──────▶│ Local Storage**
-
-**(Kaggle)   │          │  (Python)      │          │  CSV/Files**   
+**📌 Architecture** \& **Workflow Diagram**
 
 
 
-                                                            **│**
+Kaggle (API)
 
-                                                            **▼**
+&nbsp;    |
 
-                                                   **BigQuery (Raw DB)**                                                 
+Python + Pandas
 
-                                                            **│**
+&nbsp;    |
 
-                                                            **▼**
+Local CSV File
 
-                                                   **dbt Transformations**
+&nbsp;    |
 
-                                                    **(Staging \& Marts)**
+BigQuery (RAW Layer)
 
-                                                  
+&nbsp;    |
 
-                                                            **│**
+dbt (Staging \& Marts)
 
-                                                            **▼**
+&nbsp;    |
 
-                                                     **Looker Studio**     
+BigQuery (Analytics Layer)
 
-                                                     **Interactive Dash**                                                  
+&nbsp;    |
 
-
-
-**📌 Workflow Diagram**
+Looker Studio Dashboards
 
 
-
-**Kaggle (API)**
-
-     **↓**
-
-**Python + Pandas**
-
-     **↓**
-
-**Local CSV File**
-
-     **↓**
-
-**BigQuery (RAW Layer)**
-
-     **↓**
-
-**dbt (Staging \& Marts)**
-
-     **↓**
-
-**BigQuery (Analytics Layer)**
-
-     **↓**
-
-**Looker Studio Dashboards**
-
-
-**⚡ Tech Stack**
+**⚡Tech Stack**
 ---
 
 * **Kaggle API** - Programmatic dataset extraction
@@ -154,9 +118,11 @@ Medical insurance data is extracted from Kaggle using the **Kaggle API and Pytho
 **|\_\_\_ pandas\_to\_bigquery.py**
 
 
+###### 
+
+##### **⚙️ Step-by-Step Implementation**
 
 
-###### **⚙️ Step-by-Step Implementation**
 
 **1. Kaggle Dataset Access**
 
@@ -206,6 +172,30 @@ Medical insurance data is extracted from Kaggle using the **Kaggle API and Pytho
 * Regional cost analysis
 * Risk segmentation
 * Age group insights
+
+
+
+**📘 dbt Documentation**
+
+Lineage and model documentation generated using:
+
+Command
+
+* dbt docs generate
+* dbt docs serve
+
+
+
+**Try running the following commands:**
+
+* dbt run
+* dbt test
+* dbt debug
+* dbt clean
+* dbt docs generate
+* dbt docs serve
+
+
 
 
 
