@@ -16,53 +16,43 @@ Medical insurance data is extracted from Kaggle using the **Kaggle API and Pytho
 
 ###### **Project Architecture \& Workflow** 
 
-**Architecture**
+**📌 Architecture**
 
-**┌─────────────┐       ┌───────────────┐       ┌──────────────┐**
+       
 
-**│  Data Source│──────▶│ Data Extraction│──────▶│ Local Storage│**
+**Data Source│──────▶│ Data Extraction│──────▶│ Local Storage**
 
-**│  (Kaggle)   │       │  (Python)     │       │  CSV/Files   │**
+**(Kaggle)   │          │  (Python)      │          │  CSV/Files**   
 
-**└─────────────┘       └───────────────┘       └──────────────┘**
+
 
                                                             **│**
 
                                                             **▼**
 
-                                                  **┌──────────────────┐**
-
-                                                  **│ BigQuery (Raw DB)│**
-
-                                                  **└──────────────────┘**
+                                                   **BigQuery (Raw DB)**                                                 
 
                                                             **│**
 
                                                             **▼**
 
-                                                  **┌──────────────────┐**
+                                                   **dbt Transformations**
 
-                                                  **│ dbt Transformations│**
+                                                    **(Staging \& Marts)**
 
-                                                  **│ (Staging \& Marts) │**
-
-                                                  **└──────────────────┘**
+                                                  
 
                                                             **│**
 
                                                             **▼**
 
-                                                  **┌──────────────────┐**
+                                                     **Looker Studio**     
 
-                                                  **│ Looker Studio     │**
-
-                                                  **│ Interactive Dash │**
-
-                                                  **└──────────────────┘**
+                                                     **Interactive Dash**                                                  
 
 
 
-**Workflow Diagram**
+**📌 Workflow Diagram**
 
 
 
@@ -133,13 +123,9 @@ Medical insurance data is extracted from Kaggle using the **Kaggle API and Pytho
 
 **│   ├── sources.yml**                 
 
-**│   │**
-
 **│   ├── staging/**
 
 **│   │   └── stg\_medical\_insurance.sql**   
-
-**│   │**
 
 **│   ├── marts/**
 
@@ -149,11 +135,7 @@ Medical insurance data is extracted from Kaggle using the **Kaggle API and Pytho
 
 **│   │   └── age\_metrics.sql**           
 
-**│   │**
-
 **│   └── schema.yml**                  
-
-**│**
 
 **├── dbt\_project.yml**                 
 
@@ -169,8 +151,8 @@ Medical insurance data is extracted from Kaggle using the **Kaggle API and Pytho
 
 **|\_\_\_ medical\_insurance.csv**
 
-**|\_\_\_ pandas\_to\_bigquery.py
-|**
+**|\_\_\_ pandas\_to\_bigquery.py**
+
 
 
 
