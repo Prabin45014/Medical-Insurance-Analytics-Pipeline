@@ -66,35 +66,31 @@ Medical insurance data is extracted from Kaggle using the **Kaggle API and Pytho
 
 
 
-**Kaggle Dataset**
+**Kaggle (API)**
 
-      **↓** (Kaggle API)
+     **↓**
 
-**Python**
+**Python + Pandas**
 
-      **↓**
-
-**Pandas** (EDA \& validation)
-
-      **↓**
+     **↓**
 
 **Local CSV File**
 
-      **↓** (Manual Upload)
+     **↓**
 
-**BigQuery** (RAW)
+**BigQuery (RAW Layer)**
 
-      **↓**
+     **↓**
 
-**dbt** (Staging \& Marts)
+**dbt (Staging \& Marts)**
 
-      **↓**
+     **↓**
 
-**BigQuery** (Analytics)
+**BigQuery (Analytics Layer)**
 
-      **↓**
+     **↓**
 
-**Looker Studio** (Dashboards)
+**Looker Studio Dashboards**
 
 
 **⚡ Tech Stack**
@@ -232,6 +228,8 @@ Medical insurance data is extracted from Kaggle using the **Kaggle API and Pytho
 
 
 **📊 Final Deliverables**
+
+
 
 * End-to-end medical insurance analytics pipeline
 * Kaggle dataset → external data source
